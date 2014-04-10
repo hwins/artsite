@@ -1,0 +1,23 @@
+{% load sitetree %}
+      vertical list
+<ul>
+    vertical list
+	{% for item in sitetree_items %}
+		{% if item.has_children %}
+			{% if item.is_current or item.in_current_branch %}
+				<li class="expanded">
+				><a href="{% sitetree_url for item %}">{{ item.title_resolved }}</a>
+				</li>
+				{% sitetree_children of item for menu template "sitetree/menu_foundation_flyout.html" %}
+			{% else % }
+				<li class="collapsed">
+				<a href="{% sitetree_url for item %}">{{ item.title_resolved }}</a>
+				</li>
+			{% endif %}
+		{% else %}
+			<li class="leaf">
+			<a href="{% sitetree_url for item %}">{{ item.title_resolved }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
