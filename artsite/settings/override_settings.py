@@ -12,7 +12,7 @@ TEMPLATE_DEBUG = True
 #MEDIA_ROOT = ''
 MEDIA_ROOT = os.path.normpath(os.path.join(PROJECT_PATH, '../media'))
 MEDIA_URL = '/media/'
- 
+
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
