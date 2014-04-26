@@ -10,6 +10,6 @@ class Event(models.Model):
     event_date = models.DateTimeField(blank=True,
                                       null=True,
                                       )
-    
+
     def __str__(self):
         return self.title

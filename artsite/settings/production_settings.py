@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'sitetree',
     'tinymce',
+    'photologue',
+    'south',
     'artsite.apps.content',
 )
 
@@ -87,8 +89,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
+from photologue import PHOTOLOGUE_APP_DIR
+
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
+    PHOTOLOGUE_APP_DIR,
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',

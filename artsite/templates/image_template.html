@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block base_content %}
+<div id="page">
+	{% include "header.html" %}
+	<div id="main-container">
+		<div class="left-container-outer">
+			<div class="left-container-inner">
+				{% include "navagation_menu.html" %}
+			</div>
+		</div>
+		<div class="right-container-outer">
+			<div class="right-container-inner">
+				<h1>{{ object.title }}</h1>
+				{% if object.description %}
+					<p>{{ object.description }}</p>
+				{% endif %}
+				<div class="photo-gallery">
+    				{% for photo in object.public %}
+    				<div class="gallery-photo">
+        				<a href="{{ photo.get_absolute_url }}">
+        					<img src="{{ photo.get_thumbnail_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ photo.title }}"/>
+        				</a>
+    				</div>
+    				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% load blog_link %}
+	<div class="blog-link">
+		{% blog_link_line %}
+	</div>
+	{% include "footer.html" %}
+</div>
+{% endblock %}

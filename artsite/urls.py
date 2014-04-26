@@ -15,5 +15,6 @@ urlpatterns = patterns('',
                            'django.views.static.serve',
                            {'document_root': settings.MEDIA_ROOT}
                            ),
+                       url(r'^photologue/', include('photologue.urls')),
                        url(r'^', include('artsite.apps.content.urls')),
-)
+                       )
