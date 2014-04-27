@@ -6,18 +6,34 @@
 
 {% block content %}
 
-<h1>{{ object.title }}</h1>
-<div class="gallery-photo">
-    <a href="{{ object.image.url }}"><img src="{{ object.get_display_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ object.title }}"/></a>
-    {% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
-</div>
 {% if object.public_galleries %}
-<h2>This photo is found in the following galleries:</h2>
-<ol>
-{% for gallery in object.public_galleries %}
-    <li>{%previous_in_gallery object gallery%} <a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a> {%next_in_gallery object gallery%}</li>
-{% endfor %}
-</ol>
+	{% for gallery in object.public_galleries %}
+	
+		<h1>{{ object.title }}</h1>
+		<div class="gallery-photo">
+    			<a href="{{ object.image.url }}"><img src="{{ object.get_display_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ object.title }}"/></a>    			
+		</div>
+		<div class="image-caption">
+			{% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
+		</div>
+			
+		<div class="image-navagation-row">				    
+			<span class="forward-in-gallery">
+			  	{% next_in_gallery object gallery %}
+			  	<p>newer images</p> 
+			 </span>			
+			<span class="backward-in-gallery">
+				{% previous_in_gallery object gallery %}
+				<p>older images</p>
+			</span>			
+		</div>
+		
+		<span class="gallery-return">
+			<a href="/art-images/{{ gallery.title_slug }}/">Return to {{ gallery.title }}</a>
+		</span>
+				
+ 	{% endfor %}
 {% endif %}
+
 
 {% endblock %}

@@ -11,5 +11,8 @@ class Event(models.Model):
                                       null=True,
                                       )
 
+    class Meta:
+        ordering = ['-event_date']
+
     def __str__(self):
         return self.title
