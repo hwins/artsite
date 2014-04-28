@@ -1,0 +1,219 @@
+#VRML V2.0 utf8
+
+# rideControl.wrl - this is where positions for the car and the
+# viewpoints are contained
+
+# timer is for the ride the coaster viewpoint
+DEF timer TimeSensor {
+    loop TRUE
+    cycleInterval 60
+}
+
+# this controls the path positions, direction and tilt
+# of the ride the coaster view
+
+# this controls path positions
+DEF pathPositions PositionInterpolator {
+    key [
+        0   # start position key point A
+        .05 # point B
+        .10 # point C
+        .15 # point D
+        .20 # point E
+        .25 # point F
+        .30 # point G
+        .35 # point H
+        .40 # point I
+        .45 # point J
+        .50 # point K
+        .55 # point L
+        .60 # point M
+        .65 # point N
+        .70 # point O
+        .75 # point P
+        .80 # point Q
+        .85 # point R
+        1   # point A end position
+    ]
+    keyValue [
+        2.0 0.5 0.0,        # A
+        2.0 0.5 -5.0,       # B
+        2.0 11.0 -20.0,     # C
+        12.0 15.0 -30.0,    # D
+        12.0 24.5 -55.0,    # E
+        4.0 26.5 -65.0,     # F
+        4.0 27.5 -70.0,     # G
+        12.0 26.5 -70.0,    # H
+        30.0 16.5 -50.0,    # I
+        20.0 26.5 -38.0,    # J
+        26.0 28.5 -30.0,    # K
+        47.0 18.5 -50.0,    # L
+        47.0 18.5 -69.0,    # M
+        54.0 18.5 -69.0,    # N
+        54.0 29.0 -34.0,    # O
+        32.0 09.0 -11.0,    # P
+        37.0 05.0 -6.0,     # Q
+        37.0 0.5 0.0,      # R
+        2.0 0.5 0.0,        # A
+    ]
+}
+
+# this controls rotation on the Y axis (right and left)
+# since track was layed in 45 or 90 degree angles this calculation
+# was straight forward - just convert to radians
+DEF pathDirection OrientationInterpolator {
+    key [
+        0   # start position key point A
+        .075 # point B
+        .125 # point C
+        .175 # point D
+        .225 # point E
+        .275 # point F
+        .325 # point G
+        .375 # point H
+        .425 # point I
+        .475 # point J
+        .525 # point K
+        .575 # point L
+        .625 # point M
+        .675 # point N
+        .725 # point O
+        .775 # point P
+        .825 # point Q
+        .875 # point R
+        .985 # end of ride
+        1   # point A end position
+    ]
+    keyValue [
+        0 1 0 0.0,
+        0 1 0 0.0,
+        0 1 0 -0.785,
+        0 1 0 0.0,
+        0 1 0 0.785,
+        0 1 0 0.0,
+        0 1 0 -1.57,
+        0 1 0 -2.355,
+        0 1 0 -3.925,
+        0 1 0 -2.35,
+        0 1 0 -0.785,
+        0 1 0 0.0,
+        0 1 0 -1.57,
+        0 1 0 -3.14,
+        0 1 0 -3.925,
+        0 1 0 -2.355,
+        0 1 0 -3.14,
+        0 1 0 1.57,
+        0 1 0 1.57,
+        0 1 0 0.0
+    ]
+}
+
+# this controls rotation on the X axis (up and down)
+# to calculate it was necessary to calculate angle using trigonomentry
+#angle degrees radians
+# a     0.00    0.000
+# b    33.69    0.588
+# c    16.43    0.287
+# d    23.58    0.412
+# e     8.98    0.155
+# f    11.54    0.201
+# g    -7.18   -0.125
+# h   -21.25   -0.370
+# i    36.11    0.630
+# j    10.18    0.178
+# k    20.70   -0.361
+# l     0.00    0.000
+# m     0.00    0.000
+# n    16.60    0.290
+# o   -37.94   -0.662
+# p   -34.45   -0.601
+# q   -53.13   -0.927
+# r     0.00    0.000
+
+DEF pathTilt OrientationInterpolator {
+    key [
+        0   # start position key point A
+        .075 # point B
+        .125 # point C
+        .175 # point D
+        .225 # point E
+        .275 # point F
+        .325 # point G
+        .375 # point H
+        .425 # point I
+        .475 # point J
+        .525 # point K
+        .575 # point L
+        .625 # point M
+        .675 # point N
+        .725 # point O
+        .775 # point P
+        .825 # point Q
+        .875 # point R
+        1   # point A end position
+    ]
+    keyValue [
+        1 0 0 0.0,
+        1 0 0 0.588,
+        1 0 0 0.287,
+        1 0 0 0.412,
+        1 0 0 0.155,
+        1 0 0 0.201,
+        1 0 0 -0.125,
+        1 0 0 -0.370,
+        1 0 0 0.630,
+        1 0 0 0.178,
+        1 0 0 -0.361,
+        1 0 0 0.0,
+        1 0 0 0.0,
+        1 0 0 0.290,
+        1 0 0 -0.662,
+        1 0 0 -0.601,
+        1 0 0 -0.927,
+        1 0 0 0.0,
+        1 0 0 0.0
+    ]
+}
+
+# viewpoint for ride the coaster is in a Transform node
+DEF coaster Transform {
+    translation 0.0 0.0 0.0
+    children [
+        # hold the right and left rotations
+        DEF coasterCarRightLeft Transform {
+            translation 0.0 1.5 0.0
+            children [
+                # hold the up and down rotations
+                DEF coasterCarUpDown Transform {
+                    children [
+                        Inline {url "coasterCarShape.wrl"}
+                        DEF coasterRiderView Viewpoint {
+                            orientation 0 0 0  0
+                            position 0 1 -0.5
+                            description "coaster rider view"
+                        }
+                        DEF coasterSideView Viewpoint {
+                            orientation 0 1 0 -1.57
+                            position -6 1 0
+                            description "fly along at coaster side"
+                        }
+                        DEF coasterFrontView Viewpoint {
+                            orientation 0 1 0 -3.14
+                            position 0 1 -5
+                            description "watch coaster from the front"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+ROUTE timer.fraction_changed TO pathPositions.set_fraction
+ROUTE pathPositions.value_changed TO coaster.set_translation
+
+ROUTE timer.fraction_changed TO pathDirection.set_fraction
+ROUTE pathDirection.value_changed TO coasterCarRightLeft.set_rotation
+
+ROUTE timer.fraction_changed TO pathTilt.set_fraction
+ROUTE pathTilt.value_changed TO coasterCarUpDown.set_rotation

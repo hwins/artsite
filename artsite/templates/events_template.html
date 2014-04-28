@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block base_content %}
+<div id="page">
+	{% include "header.html" %}
+	<div id="main-container">
+		<div class="left-container-outer">
+			<div class="left-container-inner">
+				{% include "navagation_menu.html" %}
+			</div>
+		</div>
+		<div class="right-container-outer">
+			<div class="right-container-inner">
+				<h1>News, Events, Happenings, etc.</h1>
+				<div class="event-content">
+					{% for event in object_list %}
+						<h2>{{event.title}}</h2>
+						{{event.details|safe}}
+					{% endfor %}		
+				</div>
+			</div>
+		</div>
+	</div>
+	{% load blog_link %}
+	<div class="blog-link">
+		{% blog_link_line %}
+	</div>
+	{% include "footer.html" %}
+</div>
+{% endblock %}

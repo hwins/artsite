@@ -1,0 +1,792 @@
+#VRML V2.0 utf8
+
+# track.wrl - Geometry Extrusions to represent the track are
+# combined here. The track layout was originally laid out by
+# hand using graph paper.
+
+Group { 
+    children [
+        # all track segments
+        # although the Extrusion was the same for all, spine was not
+        # so a DEF could not work
+        Transform {
+            translation 0.0 1.0 0.0
+            children [
+                # track segment A
+                Transform {
+                    children [
+                        Shape {
+                            appearance DEF trackColor Appearance {
+                                material Material {
+                                    ambientIntensity 0.1
+                                    diffuseColor 0.8 0.5 0.3
+                                    emissiveColor 1.0 0.5 0.1
+                                    specularColor 0.5 0.5 0.5
+                                }
+                            }
+                            geometry Extrusion {
+                                convex FALSE
+                                solid TRUE
+                                beginCap TRUE
+                                endCap TRUE
+                                crossSection [
+                                    -1.0 0.0,
+                                    -0.1 0.1,
+                                    -0.1 0.2,
+                                    -0.3 0.2,
+                                    -0.1 0.3,
+                                    0.1 0.3,
+                                    0.3 0.2,
+                                    0.1 0.2,
+                                    0.1 0.1,
+                                    1.0 0.0,
+                                    0.1 -0.1,
+                                    0.1 -0.2,
+                                    0.3 -0.2,
+                                    0.1 -0.3,
+                                    -0.1 -0.3,
+                                    -0.3 -0.2,
+                                    -0.1 -0.2,
+                                    -0.1 -0.1,
+                                    -1.0 0.0
+                                ]
+                                spine [
+                                    2.0	0.0 0.0,
+                                    2.0	0.0 -5.0
+                                ]
+                                orientation [
+                                ]
+                            }
+                        }
+                        # track segment B
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            2.0	0.0 -5.0,
+                                            2.0	10.0 -20.0
+                                        ]
+                                        orientation [
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment C
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            2.0	10.0 -20.0,
+                                            12.0 14.0 -30.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 -0.785,
+                                            0.0 1.0 0.0 -0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment D
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            12.0 14.0 -30.0,
+                                            12.0 24.0 -55.0
+                                        ]
+                                        orientation [
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment E
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            12.0 24.0 -55.0,
+                                            4.0 26.0 -65.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.785,
+                                            0.0 1.0 0.0 0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment F
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            4.0 26.0 -65.0,
+                                            4.0 27.0 -70.0
+                                        ]
+                                        orientation [
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment G
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            4.0 27.0 -70.0,
+                                            12.0 26.0 -70.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 1.57,
+                                            0.0 1.0 0.0 1.57
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment H
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            12.0 26.0 -70.0,
+                                            30.0 16.0 -50.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.785,
+                                            0.0 1.0 0.0 0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment I
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            30.0 16.0 -50.0,
+                                            19.0 26.0 -38.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 -0.785,
+                                            0.0 1.0 0.0 -0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment J
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            19.0 26.0 -38.0,
+                                            26.0 28.0 -30.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.785,
+                                            0.0 1.0 0.0 0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment K
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            26.0 28.0 -30.0,
+                                            47.0 18.0 -50.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 -0.785,
+                                            0.0 1.0 0.0 -0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment L
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            47.0 18.0 -50.0,
+                                            47.0 18.0 -69.0
+
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.0,
+                                            0.0 1.0 0.0 0.0
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment M
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            47.0 18.0 -69.0,
+                                            54.0 18.0 -69.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 1.57,
+                                            0.0 1.0 0.0 1.57
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment N
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            54.0 18.0 -69.0,
+                                            54.0 28.0 -34.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.0,
+                                            0.0 1.0 0.0 0.0
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment O
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            54.0 28.0 -34.0,
+                                            32.0 08.0 -11.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 -0.785,
+                                            0.0 1.0 0.0 -0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment P
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            32.0 08.0 -11.0,
+                                            37.0 04.0 -06.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.785,
+                                            0.0 1.0 0.0 0.785
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment Q
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            37.0 04.0 -6.0,
+                                            37.0 00.0 0.0
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 0.0,
+                                            0.0 1.0 0.0 0.0
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                        # track segment R
+                        Transform {
+                            children [
+                                Shape {
+                                    appearance USE trackColor
+                                    geometry Extrusion {
+                                        convex FALSE
+                                        solid TRUE
+                                        beginCap TRUE
+                                        endCap TRUE
+                                        crossSection [
+                                            -1.0 0.0,
+                                            -0.1 0.1,
+                                            -0.1 0.2,
+                                            -0.3 0.2,
+                                            -0.1 0.3,
+                                            0.1 0.3,
+                                            0.3 0.2,
+                                            0.1 0.2,
+                                            0.1 0.1,
+                                            1.0 0.0,
+                                            0.1 -0.1,
+                                            0.1 -0.2,
+                                            0.3 -0.2,
+                                            0.1 -0.3,
+                                            -0.1 -0.3,
+                                            -0.3 -0.2,
+                                            -0.1 -0.2,
+                                            -0.1 -0.1,
+                                            -1.0 0.0
+                                        ]
+                                        spine [
+                                            37.0 00.0 0.0,
+                                            2.0	0.0 0.0,
+                                        ]
+                                        orientation [
+                                            0.0 1.0 0.0 -1.57,
+                                            0.0 1.0 0.0 -1.57
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

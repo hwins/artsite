@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+body {
+  background: none;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+img {
+  border: 0;
+}
+#hide img{
+	visibility: hidden;
+}
+#topMargin {
+	position: absolute;
+	top: 0;
+	height: 20%;
+	width: 100%;
+}
+#leftMargin {
+	position: absolute;
+	top: 20%;
+	left: 0;
+	width: 10%;
+}
+#centralArea {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	width: 80%;
+	font-family:"Times New Roman",Times,serif;
+	font-size: 60px;
+	color: black;
+}
+#rightMargin {
+	position: absolute;
+	top: 20%;
+	left: 90%;
+	width: 10%;
+}
+#upperLeft {
+	margin-top: 0px;
+	margin-left: 0px;	
+}
+#lowerLeft {
+	margin-top: 300px;
+	margin-left: 0px;		
+}
+.threeBoxLine {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+.boxDotOn {
+	background-image: url("../img/boxdotinsky.png");
+	height: 200px;
+	width: 200px;
+	display: block;
+	float: left;	
+}
+.boxDotOff {
+	background-position: -200px 0;
+	background-image: url("../img/boxdotinsky.png");
+	height: 200px;
+	width: 200px;
+	display: block;
+	float: left;		
+}

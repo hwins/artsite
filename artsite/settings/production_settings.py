@@ -112,6 +112,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 MEDIA_ROOT = '/home/hwinston/artsite/media/'
 MEDIA_URL = '/media/'
 
+FILEBROWSER_DIRECTORY = 'files/'
+
 STATIC_ROOT = '/var/www/art.howardwinston.com/static/'
 STATIC_URL = '/static/'
 

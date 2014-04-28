@@ -1,0 +1,60 @@
+#VRML V2.0 utf8
+
+# panView.wrl - this is will present a panoramic view
+# that will offer the experience pan above the terrain
+
+# timer is for the panoramic view
+DEF timer TimeSensor {
+    loop TRUE
+    cycleInterval 160
+}
+
+# this controls path positions
+DEF panPositions PositionInterpolator {
+    key [ 0 .333 .50 .666 1 ]
+    keyValue [
+        -500.00 0  500.00,
+        500.00 0 -500.00,
+        500.00 0  500.00,
+        -500.00 0 -500.0,
+        -500.00 0  500.00,
+    ]
+}
+
+# this controls rotation on the Y axis (right and left)
+DEF panDirection OrientationInterpolator {
+    key [ 0 .25 .50 .75 1 ]
+    keyValue [
+        0 1 0 -0.785,
+        0 1 0 3.14,
+        0 1 0 0.785,
+        0 1 0 3.14,
+        0 1 0 -0.785
+    ]
+}
+
+
+# viewpoint of the panoramic  view
+DEF panViewpoints Transform {
+    translation 0.0 0.0 0.0
+    children [
+        # hold the right and left rotations
+        DEF panViewRightLeft Transform {
+            translation 0.0 20.0 0.0
+            children [
+                # view has a slight angle upward towards the sky
+                DEF panViewpoint Viewpoint {
+                    orientation 1 0 0  0.175
+                    position 0 1 -0.5
+                    description "panoramic view"
+                }
+            ]
+        }
+    ]
+}
+
+ROUTE timer.fraction_changed TO panPositions.set_fraction
+ROUTE panPositions.value_changed TO panViewpoints.set_translation
+
+ROUTE timer.fraction_changed TO panDirection.set_fraction
+ROUTE panDirection.value_changed TO panViewRightLeft.set_rotation

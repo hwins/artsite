@@ -1,0 +1,138 @@
+#VRML V2.0 utf8
+
+# supportColumns.wrl - based on the x,y,z layout for the track.wrl
+
+# support column for each bend
+# y position is computed given column is 100 units tall
+# 100/2 = 50 (+ 1 position above base line) then add the y
+# value for that point
+Group {
+    children [
+        # point A
+        Transform {
+            translation 2.0 -49.0 0.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point B
+        Transform {
+            translation 2.0 -49.0 -5.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point C
+        Transform {
+            translation 2.0 -39.0 -20.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point D
+        Transform {
+            translation 12.0 -35.0 -30.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point E
+        Transform {
+            translation 12.0 -25.0 -55.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point F
+        Transform {
+            translation 4.0 -23.0 -65.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point G
+        Transform {
+            translation 4.0 -22.0 -70.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point H
+        Transform {
+            translation 12.0 -23.0 -70.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point I
+        Transform {
+            translation 30.0 -33.0 -50.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point J
+        Transform {
+            translation 19.0 -23.0 -38.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point K
+        Transform {
+            translation 26.0 -21.0 -30.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point L
+        Transform {
+            translation 47.0 -31.0 -50.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point M
+        Transform {
+            translation 47.0 -31.0 -69.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point N
+        Transform {
+            translation 54.0 -31.0 -69.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point O
+        Transform {
+            translation 54.0 -21.0 -34.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point P
+        Transform {
+            translation 32.0 -41.0 -11.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point Q
+        Transform {
+            translation 37.0 -45.0 -6.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+        # point R
+        Transform {
+            translation 37.0 -49.0 -0.0
+            children [
+                Inline {url "supportColumn.wrl"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+#VRML V2.0 utf8
+
+# Roller Coaster Ride
+# Howard Winston
+# written for MCIS 0625 July 4, 2010
+#
+# this is the main wrl to present the space coaster
+# it consists of this and 5 addtional inline files:
+#
+# track.wrl - Geometry Extrusions to represent the track are
+# combined here. The track layout was originally laid out by
+# hand using graph paper.
+#
+# supportColumn.wrl - this is a single support column for the
+# track. It is used in supportColumns.wrl (plural)
+#
+# supportColumns.wrl - based on the x,y,z layout for the track.wrl
+#
+# coasterCarShape.wrl - the shape nodes that make up the coaster
+# car. Several IndexedFaceSet nodes are used to make the different
+# parts of the car.
+#
+# rideControl.wrl - this is where positions for the car and the
+# viewpoints are contained
+
+# roller coaster world
+Background {
+    skyColor [
+        0.0 0.2 0.7,
+        0.0 0.5 1.0,
+        1.0 1.0 1.0
+    ]
+    skyAngle [ 1.309, 1.571]
+    groundColor [
+        0.1 0.10 0.0,
+        0.4 0.25 0.2,
+        0.6 0.66 0.6,
+    ]
+    groundAngle [ 1.309, 1.571]
+}
+
+Group {
+    children [        
+        # track
+        Inline {url "track.wrl"}
+        # columns to hold track up
+        Inline {url "supportColumns.wrl"}
+    ]
+}
+
+Viewpoint {
+    orientation 0 1 0 -0.4
+    position 0 10 35
+    description "front view"
+}
+
+Viewpoint {
+    orientation 1 0 0  -1.57
+    position 35 120 -40
+    description "bird's eye view"
+}
+
+# here is where the coster ride view is
+Inline {url "rideControl.wrl"}
