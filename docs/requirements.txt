@@ -8,6 +8,6 @@ django-photologue==2.7
 django-sitetree==1.0.0
 django-tinymce==1.5.2
 psycopg2==2.5.2
-pyenchant==1.6.6
+pyenchant==1.6.5
 six==1.6.1
 sorl-thumbnail==11.12
