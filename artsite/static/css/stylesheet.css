@@ -95,10 +95,8 @@ ul li.expanded a:hover {
 	color: #111111;
 }
 
-.views-field-field-imgdesc {
-	color: #333333;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 0.875em;
+.sitetree-children {
+	margin-left: -48px;
 }
 
 #page {
@@ -189,20 +187,13 @@ ul li.expanded a:hover {
 .forward-in-gallery {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 120px;
-}
-.forward-in-gallery img{	
-	max-height: 120px;
+	min-width: 220px;
 }
 
 .backward-in-gallery {
 	display: inline-block;
 	vertical-align: top;
-	margin-left: 120px;
-}
-
-.backward-in-gallery img {
-	max-height: 120px;
+	min-width: 220px;
 }
 
 .gallery-return {
@@ -226,6 +217,31 @@ ul li.expanded a:hover {
 	text-decoration: none;	
 }
 
+.gallery-nav-true {
+	color: #FFFFFF;
+	background-color: #404040;
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888;	
+}
+
+.gallery-nav-true a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.gallery-nav-true a:hover {
+	color: #636300;
+	text-decoration: none;	
+}
+
+.gallery-nav-false {
+	
+}
+
 .footer {
 	
 }
@@ -236,6 +252,6 @@ ul li.expanded a:hover {
 	padding-bottom: 30px;
 }
 
-
-
-
+.django-gif {
+	border: 0;
+}

@@ -1,6 +1,7 @@
 {% extends "photologue/root.html" %}
 
 {% load photologue_tags %}
+{% load photo_gallery_nav %}
 
 {% block title %}{{ object.title }}{% endblock %}
 
@@ -17,21 +18,18 @@
 			{% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
 		</div>
 			
-		<div class="image-navagation-row">				    
+		<div class="image-navagation-row">
 			<span class="forward-in-gallery">
-			  	{% next_in_gallery object gallery %}
-			  	<p>newer images</p> 
-			 </span>			
+				{% forward_in_gallery object gallery %}
+			</span>
+			<span class="gallery-return">
+				<a href="/art-images/{{ gallery.title_slug }}/">Return to {{ gallery.title }}</a>
+			</span>			
 			<span class="backward-in-gallery">
-				{% previous_in_gallery object gallery %}
-				<p>older images</p>
+				{% backward_in_gallery object gallery %}
 			</span>			
 		</div>
-		
-		<span class="gallery-return">
-			<a href="/art-images/{{ gallery.title_slug }}/">Return to {{ gallery.title }}</a>
-		</span>
-				
+								
  	{% endfor %}
 {% endif %}
 
