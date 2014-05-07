@@ -3,6 +3,8 @@ artsite
 
 This is a django based I wrote to display creative work
 
+http://art.howardwinston.com
+
 Additional documentation to be placed in the "docs" directory.
 
 Quick start
