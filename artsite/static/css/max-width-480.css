@@ -1,0 +1,159 @@
+/* less than 480 px width override css */
+body {	
+}
+
+img {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 24px;
+	font-weight: normal;
+}
+
+/* navagation menu */
+ul li.leaf {
+}
+
+ul li.leaf a {
+}
+
+ul li.leaf a:hover {
+}
+
+ul li.collapsed {
+}
+
+ul li.collapsed a {
+}
+
+ul li.collapsed a:hover {
+}
+
+ul li.expanded {
+}
+
+ul li.expanded a {
+}
+
+ul li.expanded a:hover {
+}
+
+.sitetree-children {
+	margin-left: 0px;
+}
+
+#page {
+	margin: 3%px;
+}
+
+.section-header {
+	
+}
+
+#image-header {
+}
+
+#logo-img {
+}
+
+#logo {
+}
+
+#main-container {
+	
+}
+
+.left-container-outer {
+	width: 100%;
+	border-right: none;
+	border-bottom: none;
+}
+
+.left-container-inner {
+}
+
+.navigation-menu {				
+	border-bottom: 1px solid #889999;
+}
+
+.right-container-outer {
+}
+
+.right-container-inner {
+}
+
+#flatpage-title {
+}
+
+#flatpage-content {
+}
+
+.single-container {
+}
+
+.blog-link {
+}
+
+.photo-gallery {	
+}
+
+.gallery-photo {
+}
+
+.image-caption {
+}
+
+.image-text {
+	margin: 16px;
+	font: 12px arial, helvetica, clean, sans-serif;
+}
+
+.image-navagation-row {
+	font-size: 10px;
+}
+
+.forward-in-gallery {
+}
+
+.backward-in-gallery {
+}
+
+.gallery-return {
+	margin: 3px;
+}
+
+.gallery-return a {
+}
+
+.gallery-return a:hover {
+}
+
+.gallery-nav-true {
+	margin: 3px;
+}
+
+.gallery-nav-true a {
+}
+
+.gallery-nav-true a:hover {
+}
+
+.gallery-nav-false {
+}
+
+.footer {
+}
+
+.footer-inner {
+}
+
+#django-img {
+}

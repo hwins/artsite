@@ -1,3 +1,6 @@
+/* all javascript for site can go here */
+
+
 $(document).ready(function() {
 	
 	var ContentHeight = $(".left-container-outer").height();

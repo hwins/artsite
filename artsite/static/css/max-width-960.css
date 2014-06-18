@@ -1,0 +1,181 @@
+/* less than 960 px width override css */
+body {
+}
+
+img {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+p {
+}
+
+/* navagation menu */
+ul li.leaf {
+	list-style-image: url(../img/menu-leaf-tablet.png);
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 0 0 0 0;
+	margin-left: 0px;
+	margin-top: 6px;
+}
+
+ul li.leaf a {
+}
+
+ul li.leaf a:hover {
+}
+
+ul li.collapsed {
+	list-style-image: url(../img/menu-collapsed-tablet.png);
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 0 0 0 0;
+	margin-left: 0px;
+	margin-top: 6px;
+}
+
+ul li.collapsed a {
+}
+
+ul li.collapsed a:hover {
+}
+
+ul li.expanded {
+	list-style-image: url(../img/menu-expanded-tablet.png);
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding: 0 0 0 0;
+	margin-left: 0px;
+	margin-top: 6px;
+}
+
+ul li.expanded a {
+}
+
+ul li.expanded a:hover {
+}
+
+.sitetree-children {
+	margin-left: -10%;
+}
+
+#page {
+	margin: 3%;
+}
+
+.section-header {
+	
+}
+
+#image-header {
+}
+
+#logo-img {
+}
+
+#logo {
+}
+
+#main-container {
+	
+}
+
+.left-container-outer {
+	width: 20%;
+	padding-right: 10%;
+	margin-right: 5%;
+	margin-bottom: 20px;
+	min-width: 120px;
+	border-right: 1px solid #889999;
+	border-bottom: 1px solid #889999;
+}
+
+.left-container-inner {
+}
+
+.navigation-menu {
+}
+
+.right-container-outer {
+	margin-left: -20%;
+}
+
+.right-container-inner {
+	margin-left: 20%;
+	margin-right: 5%;
+}
+
+#flatpage-title {
+}
+
+#flatpage-content {
+}
+
+.single-container {
+}
+
+.blog-link {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.photo-gallery {
+	text-align: center;
+}
+
+.gallery-photo {
+	max-width: 94%;
+	min-width: 90%;
+}
+
+.image-caption {
+}
+
+.image-text {
+	margin: 18px;
+	font: 14px arial, helvetica, clean, sans-serif;
+}
+
+.image-navagation-row {
+}
+
+.forward-in-gallery {
+}
+
+.backward-in-gallery {
+}
+
+.gallery-return {
+}
+
+.gallery-return a {
+}
+
+.gallery-return a:hover {
+}
+
+.gallery-nav-true {
+}
+
+.gallery-nav-true a {
+}
+
+.gallery-nav-true a:hover {
+}
+
+.gallery-nav-false {
+}
+
+.footer {
+}
+
+.footer-inner {
+}
+
+#django-img {
+}

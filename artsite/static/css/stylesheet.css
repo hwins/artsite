@@ -1,8 +1,13 @@
-/** body **/
+/* default css */
 body {
 	margin: 0;
 	font: 13px arial, helvetica, clean, sans-serif;
 	background: #ffffff url(../img/background.png) repeat scroll 0% 0%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 h1 {
@@ -31,25 +36,25 @@ h2 {
 p {
 	color: #113333;
 	font-family: Georgia, Times, TimesNR, "New Century Schoolbook", serif;
-	font-size: 11pt;
+	font-size: 20px;
 	letter-spacing: 2px;
-	line-height: 16pt;
+	line-height: 28px;
 	font-weight: normal;
 }
 
 /* navagation menu */
 ul li.leaf {
 	list-style-image: url(../img/menu-leaf.png);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	letter-spacing: 4px;
 	padding: 0 0 0 0;
 	margin-left: 27px;
 	margin-top: 8px;
 }
 
-ul li.leaf a {
-	color: #889999;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	letter-spacing: 4px;
+ul li.leaf a {	
+	color: #889999;	
 	text-decoration: none;
 }
 
@@ -59,16 +64,16 @@ ul li.leaf a:hover {
 
 ul li.collapsed {
 	list-style-image: url(../img/menu-collapsed.png);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	letter-spacing: 4px;
 	padding: 0 0 0 0;
 	margin-left: 27px;
-	margin-top: 8px;	
+	margin-top: 8px;
 }
 
-ul li.collapsed a {
-	color: #889999;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	letter-spacing: 4px;
+ul li.collapsed a {	
+	color: #889999;	
 	text-decoration: none;
 }
 
@@ -78,6 +83,9 @@ ul li.collapsed a:hover {
 
 ul li.expanded {
 	list-style-image: url(../img/menu-expanded.png);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	letter-spacing: 4px;
 	padding: 0 0 0 0;
 	margin-left: 27px;
 	margin-top: 8px;
@@ -85,9 +93,6 @@ ul li.expanded {
 
 ul li.expanded a {
 	color: #889999;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	letter-spacing: 4px;
 	text-decoration: none;
 }
 
@@ -100,17 +105,11 @@ ul li.expanded a:hover {
 }
 
 #page {
-	/* background-color: #fffcfc; */
 	background-color: #ffffff;
-	letter-spacing: 2px;
-	color: #111;
-	line-height: 1.8em;
-	min-width: 960px;
 	margin: 35px;
 }
 
 .section-header {
-	
 }
 
 #image-header {
@@ -120,11 +119,20 @@ ul li.expanded a:hover {
 #logo-img {
 	text-align: center;
 	float: none;
-	padding: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3%;
+	padding-bottom: 3%;	
+}
+
+#logo {
+	max-width: 650px;
+	width: 66%;
 }
 
 #main-container {
-	
 }
 
 .left-container-outer {
@@ -133,16 +141,13 @@ ul li.expanded a:hover {
 }
 
 .left-container-inner {
-	
 }
 
 .navigation-menu {
-	
 }
 
 .right-container-outer {
 	margin-left: 300px;
-	
 }
 
 .right-container-inner {
@@ -151,11 +156,9 @@ ul li.expanded a:hover {
 }
 
 #flatpage-title {
-	
 }
 
 #flatpage-content {
-	
 }
 
 .single-container {
@@ -168,32 +171,37 @@ ul li.expanded a:hover {
 }
 
 .photo-gallery {
-	
 }
 
 .gallery-photo {
 	display: inline-block;
 	vertical-align: top;
+	max-width: 100%;
+	height: auto;
 }
 
 .image-caption {
 	margin-bottom: 40px;
 }
 
+.image-text {
+	margin: 20px;
+	font: 16px arial, helvetica, clean, sans-serif;
+}
+
 .image-navagation-row {
-	
 }
 
 .forward-in-gallery {
 	display: inline-block;
 	vertical-align: top;
-	min-width: 220px;
+	min-width: 20px;
 }
 
 .backward-in-gallery {
 	display: inline-block;
 	vertical-align: top;
-	min-width: 220px;
+	min-width: 20px;
 }
 
 .gallery-return {
@@ -239,11 +247,9 @@ ul li.expanded a:hover {
 }
 
 .gallery-nav-false {
-	
 }
 
 .footer {
-	
 }
 
 .footer-inner {
@@ -252,6 +258,8 @@ ul li.expanded a:hover {
 	padding-bottom: 30px;
 }
 
-.django-gif {
-	border: 0;
+#django-img {
+	width: 124px;
+	height: 25px;
+	padding: 0px;
 }

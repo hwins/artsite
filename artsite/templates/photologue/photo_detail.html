@@ -15,7 +15,7 @@
     			<a href="{{ object.image.url }}"><img src="{{ object.get_display_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ object.title }}"/></a>    			
 		</div>
 		<div class="image-caption">
-			{% if object.caption %}<p>{{ object.caption }}</p>{% endif %}
+			{% if object.caption %}<div class="image-text">{{ object.caption }}</div>{% endif %}
 		</div>
 			
 		<div class="image-navagation-row">
