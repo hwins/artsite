@@ -75,6 +75,7 @@ ul li.expanded a:hover {
 	width: 100%;
 	border-right: none;
 	border-bottom: none;
+	padding-right: 0px;
 }
 
 .left-container-inner {
