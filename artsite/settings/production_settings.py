@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'sitetree',
     'tinymce',
     'photologue',
-    'south',
+    'sortedm2m',
     'artsite.apps.content',
 )
 
@@ -54,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'artsite.urls'

@@ -13,5 +13,5 @@ urlpatterns = patterns('artsite.apps.content.views',
 
 urlpatterns += patterns('django.contrib.flatpages.views',
                         url(r'^(?P<url>)$', 'flatpage'),
-                        url(r'^(?P<url>.*/)$', 'flatpage'),
+                        url(r'^(?P<url>.*/)$', 'flatpage'), 
                         )

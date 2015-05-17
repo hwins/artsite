@@ -18,6 +18,7 @@ class FlatpageFormWithTinyMCE(FlatpageForm):
 
     class Meta:
         model = FlatPage
+        fields = '__all__'
         widgets = {
                    'content': TinyMCE(attrs={'cols': 120, 'rows': 60}),
                    }
