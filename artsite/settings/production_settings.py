@@ -1,11 +1,5 @@
 """
 Django settings for artsite project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 import os
@@ -24,8 +18,14 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['art.howardwinston.com']
+ALLOWED_HOSTS = ['.howardwinston.com',
+                 'art.howardwinston.com',
+                 'howardwinston.com', ]
 
+# access to /admin path is restricted via webserver
+# this host name is for administrator
+with open(CONTROL_FILE_PATH + '/control/admin_url.private') as f:
+    ALLOWED_HOSTS.append(f.read().strip())
 
 # Application definition
 

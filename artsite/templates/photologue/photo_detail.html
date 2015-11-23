@@ -19,15 +19,15 @@
 		</div>
 			
 		<div class="image-navagation-row">
+			<span class="backward-in-gallery">
+				{% backward_in_gallery object gallery %}
+			</span>
+			<span class="gallery-return">
+				<a href="/art-images/{{ gallery.slug }}">Return to {{ gallery.title }}</a>
+			</span>
 			<span class="forward-in-gallery">
 				{% forward_in_gallery object gallery %}
 			</span>
-			<span class="gallery-return">
-				<a href="/art-images/{{ gallery.title_slug }}">Return to {{ gallery.title }}</a>
-			</span>			
-			<span class="backward-in-gallery">
-				{% backward_in_gallery object gallery %}
-			</span>			
 		</div>
 								
  	{% endfor %}
