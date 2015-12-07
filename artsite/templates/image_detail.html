@@ -1,0 +1,41 @@
+{% extends "image_base.html" %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ image.title }}</h1>
+<div class="gallery-photo">
+	<a href="/art-images/{{ view.gallery_slug }}/{{ image.image_slug }}">
+	<img src="{{ image.image_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ image.title }}"/></a>    			
+</div>
+
+<div class="image-navagation-row">
+	<span class="backward-in-gallery">
+		{% if prev_image_slug %}
+			<span class="gallery-nav-true">
+				<a href="/art-images/{{ view.gallery_slug }}/{{ prev_image_slug }}">&lt;</a>
+			</span>
+		{% else %}
+			<span class="gallery-nav-false"></span>
+		{% endif %}
+	</span>
+	<span class="gallery-return">
+		<a href="/art-images/{{ view.gallery_slug }}">Return to {{ object.gallery }}</a>
+	</span>
+	<span class="forward-in-gallery">
+		{% if next_image_slug %}
+			<span class="gallery-nav-true">
+				<a href="/art-images/{{ view.gallery_slug }}/{{ next_image_slug }}">&gt;</a>
+			</span>
+		{% else %}
+			<span class="gallery-nav-false"></span>
+		{% endif %}
+	</span>
+</div>
+
+<div class="image-caption">
+	{% if image.description %}<div class="image-text">{{ image.description|safe }}</div>{% endif %}
+</div>
+
+{% endblock %}
