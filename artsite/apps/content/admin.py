@@ -1,13 +1,15 @@
 import datetime
-
-from django.contrib import admin
-from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
-from django.contrib.flatpages.models import FlatPage
-from tinymce.widgets import TinyMCE
+import string
 
 from django import forms
+from django.contrib import admin
 from django.contrib.admin import options, widgets
+from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
+from django.contrib.flatpages.models import FlatPage
+from django.utils.text import slugify
+
 from artsite.apps.content import models
+from tinymce.widgets import TinyMCE
 
 
 class FlatpageFormWithTinyMCE(FlatpageForm):
@@ -82,3 +84,71 @@ class EventAdmin(options.ModelAdmin):
 
 
 admin.site.register(models.Event, EventAdmin)
+
+class GalleryAdmin(options.ModelAdmin):
+    models = models.Gallery
+    fields = ('title',
+              'gallery_slug',
+              'description',
+              'date_modified',
+              )
+    list_display = ('title',
+                    'date_modified',
+                    )
+    readonly_fields = ('gallery_slug',
+                       'date_modified',
+                       )
+    
+    def save_model(self, request, obj, form, change):
+#         obj.gallery_slug = obj.title.strip().\
+#             lower().\
+#             replace(' ', '-')
+#         # remove any !@#$, etc.
+#         for p in string.punctuation:
+#             if p != '-':
+#                 obj.gallery_slug = obj.gallery_slug.replace(p, '')
+#         obj.gallery_slug = obj.gallery_slug.rstrip('-')
+        obj.gallery_slug = slugify(obj.title)
+        
+        obj.date_modified = datetime.datetime.now()
+        
+        obj.save()
+        
+admin.site.register(models.Gallery, GalleryAdmin)
+
+class ImageAdmin(options.ModelAdmin):
+    models = models.Image
+    fields = ('gallery',
+              'title',
+              'image_slug',
+              'image',              
+              'description',
+              'sort_weight',
+              'date_added',
+              )
+    list_display = ('gallery',
+                    'sort_weight',
+                    'title',
+                    'image_slug',
+                    'date_added',
+                    )
+    readonly_fields = ('image_slug',
+                       'date_added',
+                       )
+                
+    def save_model(self, request, obj, form, change):
+#         obj.image_slug = obj.title.strip().\
+#             lower().\
+#             replace(' ', '-')
+#         # remove any !@#$, etc.
+#         for p in string.punctuation:
+#             if p != '-':
+#                 obj.image_slug = obj.image_slug.replace(p, '')
+#         obj.image_slug = obj.image_slug.rstrip('-')
+        obj.image_slug = slugify(obj.title)
+        
+        obj.date_added = datetime.datetime.now()
+        
+        obj.save()
+        
+admin.site.register(models.Image, ImageAdmin)

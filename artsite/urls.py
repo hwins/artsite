@@ -1,8 +1,8 @@
-from django.conf.urls import patterns, include, url
 from django.conf import settings
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
 from filebrowser.sites import site
+
 
 admin.autodiscover()
 
@@ -15,6 +15,5 @@ urlpatterns = patterns('',
                            'django.views.static.serve',
                            {'document_root': settings.MEDIA_ROOT}
                            ),
-                       url(r'^photologue/', include('photologue.urls', namespace='photologue')),
                        url(r'^', include('artsite.apps.content.urls')),
                        )

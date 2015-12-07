@@ -51,7 +51,7 @@ ul li.expanded a:hover {
 }
 
 #page {
-	margin: 3%px;
+	margin: 3%;
 }
 
 .section-header {
@@ -113,7 +113,6 @@ ul li.expanded a:hover {
 }
 
 .image-text {
-	margin: 16px;
 	font: 12px arial, helvetica, clean, sans-serif;
 }
 

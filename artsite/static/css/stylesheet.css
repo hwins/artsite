@@ -185,11 +185,15 @@ ul li.expanded a:hover {
 }
 
 .image-text {
-	margin: 20px;
+	margin-left: 10%;
+	margin-top: 5%;
+	margin-right: 10%;
 	font: 16px arial, helvetica, clean, sans-serif;
+	text-align: left;
 }
 
 .image-navagation-row {
+	margin-top: 5%;
 }
 
 .forward-in-gallery {

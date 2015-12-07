@@ -12,13 +12,13 @@
 			<div class="right-container-inner">
 				<h1>{{ object.title }}</h1>
 				{% if object.description %}
-					<p>{{ object.description }}</p>
+					<p>{{ object.description|safe }}</p>
 				{% endif %}
 				<div class="photo-gallery">
-    				{% for photo in object.public %}
+    				{% for photo in images %}    			
     				<div class="gallery-photo">
-        				<a href="{{ photo.get_absolute_url }}">
-        					<img src="{{ photo.get_thumbnail_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ photo.title }}"/>
+        				<a href="/art-images/{{ photo.gallery.gallery_slug }}/{{ photo.image_slug }}">
+        					<img src="{{ photo.image_url }}" class="{% block gallery-photo-class %}{% endblock %}" alt="{{ photo.title }}"/>
         				</a>
     				</div>
     				{% endfor %}

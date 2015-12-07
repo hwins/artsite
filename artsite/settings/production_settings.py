@@ -42,8 +42,6 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'sitetree',
     'tinymce',
-    'photologue',
-    'sortedm2m',
     'artsite.apps.content',
 )
 
@@ -95,11 +93,8 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 
-from photologue import PHOTOLOGUE_APP_DIR
-
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
-    PHOTOLOGUE_APP_DIR,
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -148,5 +143,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'paste_auto_cleanup_on_paste': 'true',
     'content_css': '/static/css/tinymce_edit.css',
     }
+TINYMCE_SPELLCHECKER = True
 
 SITE_ID = 1

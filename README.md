@@ -10,17 +10,25 @@ Additional documentation to be placed in the "docs" directory.
 Requires
 --------
 
-Django==1.8.1
-Django-tinymce-filebrowser==0.2.1
-Pillow==2.8.1
-django-filebrowser==3.5.7
-django-grappelli==2.5.7
-django-model-utils==2.2
-django-photologue==3.2
-django-sitetree==1.4.0
-django-sortedm2m==0.9.5
-django-tinymce==1.5.3
-psycopg2==2.6
-pyenchant==1.6.6
-six==1.9.0
-sorl-thumbnail==12.2
+See docs/requirements.txt
+
+Update Notes
+------------
+
+For the sake of anyone who may want to make any use of this code:
+
+I dropped my use of django-photologue in favor of a home grown image solution 
+due to problems I had upgrading. For my purposes photologue was more than I 
+needed anyway.
+
+The version of django-tinymce that I was using was giving me problems with 
+spell check, I think related to Python3. For the time being I copied version 
+2.0.6 in and made hack change in the view.py. See comments in code. 
+
+In an effort to reduce potential non-approved login attempts the path is now restricted 
+via the web server. The low level domain name must be used to gain entrance to the 
+the login page. See the settings module allowed hosts. Needless to say this is gitignored. 
+(new word "gitignored"?) This along with other secret stuff is in the control folder. 
+See settings folder.
+ 
+    

@@ -20,22 +20,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
                     os.path.join(PROJECT_PATH, 'static/'),
                     )
-
-# MIDDLEWARE_CLASSES = (
-#     'django.middleware.security.SecurityMiddleware',
-#     'django.contrib.sessions.middleware.SessionMiddleware',
-#     'django.middleware.common.CommonMiddleware',
-#     'django.middleware.csrf.CsrfViewMiddleware',
-#     'django.contrib.auth.middleware.AuthenticationMiddleware',
-#     'django.contrib.messages.middleware.MessageMiddleware',
-#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-#     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-# )
-# 
-# SESSION_COOKIE_DOMAIN = ".howardwinston.com"
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
-# CSRF_COOKIE_HTTPONLY = True
-# X_FRAME_OPTIONS = 'DENY'
-
-
